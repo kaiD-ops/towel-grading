@@ -1,4 +1,3 @@
-"""Training script for the towel quality grading model."""
 
 import os
 import json
@@ -26,15 +25,6 @@ class TrainingCallback(keras.callbacks.Callback):
 
 
 def train_model():
-    """
-    Train the towel grading CNN model.
-    
-    Steps:
-    1. Load and prepare data
-    2. Create and compile model
-    3. Train with early stopping
-    4. Save model and training history
-    """
     
     print("=" * 60)
     print("TOWEL QUALITY GRADING CNN - TRAINING")
@@ -127,13 +117,6 @@ def train_model():
 
 
 def plot_training_history(history, save_path):
-    """
-    Plot and save training/validation metrics.
-    
-    Args:
-        history: Training history object
-        save_path (str): Path to save plots
-    """
     
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
     
