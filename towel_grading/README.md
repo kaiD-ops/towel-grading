@@ -87,6 +87,30 @@ towel_grading/data/
 
 ## Usage
 
+### Option 0: Graphical User Interface (GUI) ⭐ EASIEST
+
+```bash
+python launch_gui.py
+```
+
+Or:
+
+```bash
+python gui.py
+```
+
+This launches a beautiful graphical interface with:
+- 📁 Image upload/selection
+- 🔍 Real-time grade prediction
+- 📊 Confidence scores for each grade
+- 🎨 Visual confidence bars
+- 📋 File information display
+
+**Perfect for:**
+- Easy single image prediction
+- No command-line knowledge required
+- Quick quality checks on the production line
+
 ### Option 1: Using the Interactive Menu
 
 ```bash
@@ -165,6 +189,29 @@ AUGMENTATION_CONFIG = {
     'contrast_range': [0.8, 1.2],
 }
 ```
+
+## GUI Features
+
+The graphical interface (`gui.py`) provides:
+
+- **📁 Image Upload**: Easy drag-and-drop or file browser selection
+- **🔍 Real-time Prediction**: Fast inference on GPU/CPU
+- **📊 Confidence Scores**: Visual bars showing model confidence for each grade
+- **🎨 Beautiful UI**: Modern Tkinter interface with dark/light theme support
+- **📋 File Information**: Display selected file name and size
+- **✓ Status Indicator**: Shows model loading and prediction status
+- **⚡ Threading**: Non-blocking UI during predictions (no freezing)
+
+### GUI Usage
+```bash
+python launch_gui.py
+```
+
+Then:
+1. Click "📁 Upload Image" button
+2. Select a towel image from your computer
+3. Click "🔍 Predict Grade" button
+4. View the prediction result with confidence scores
 
 ## Model Architecture
 
@@ -255,6 +302,8 @@ Model loaded from: models/best_model.h5
 
 | File | Purpose |
 |------|---------|
+| `gui.py` | Graphical user interface with Tkinter |
+| `launch_gui.py` | Launcher script for the GUI |
 | `config.py` | Central configuration file with all hyperparameters |
 | `model.py` | MobileNetV2 model architecture and compilation |
 | `data_utils.py` | Data loading, preprocessing, and augmentation |
